@@ -13,18 +13,19 @@ Monorepo layout:
 ### Prerequisites
 
 - Rust **1.88+** (`rust-toolchain.toml`)
-- Node **22+**, pnpm **10+**
+- Node **22+** (`.node-version`), pnpm **10+**
 - Linux deps for Tauri: see [Tauri prerequisites](https://v2.tauri.app/start/prerequisites/)
 
 ### Development
 
 ```bash
 pnpm install
-just dev          # or: pnpm dev
-just check        # fmt, clippy, tests, tsc, desktop build
+make dev          # or: pnpm dev
+make verify       # fmt, clippy, tests, bindings, tsc, lint, build
+make bindings     # regenerate src/bindings.ts from Rust commands
 ```
 
-`tauri dev` (debug) regenerates `apps/pitaya-desktop/src/bindings.ts` via **tauri-specta**. A committed stub exists for CI until the first local dev run.
+`tauri dev` (debug) also regenerates `apps/pitaya-desktop/src/bindings.ts` via **tauri-specta**. CI runs `make bindings` via the Rust test suite to keep bindings in sync.
 
 ### Roadmap phases
 

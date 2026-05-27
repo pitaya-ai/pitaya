@@ -3,7 +3,6 @@
 node_modules/
 dist/
 apps/pitaya-desktop/vite.config.d.ts
-node_modules/
 .DS_Store
 *.log
 .env

@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "pnpm --filter pitaya-desktop tauri dev",
     "build": "pnpm --filter pitaya-desktop build",
-    "check": "pnpm --filter pitaya-desktop exec tsc -b --pretty false",
+    "check": "pnpm -r --if-present run check",
     "lint": "pnpm -r --if-present run lint"
   }
 }
