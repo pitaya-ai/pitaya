@@ -11,7 +11,5 @@ workspace = true
 
 [dependencies]
 pitaya-core = { workspace = true }
-pitaya-meetings = { workspace = true }
-pitaya-storage = { workspace = true }
 tokio = { workspace = true }
 tracing = { workspace = true }

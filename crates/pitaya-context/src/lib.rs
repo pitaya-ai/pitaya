@@ -1,1 +1,1 @@
-//! Implicit scope + @ attachment merge and retrieval plans (P4/P5).
+//! Implicit scope, @ attachment merge, and retrieval plans. Not yet implemented.

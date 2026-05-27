@@ -1,1 +1,1 @@
-//! Dual-track PCM capture. PipeWire backend ships in P2.
+//! Dual-track PCM capture. PipeWire backend not yet implemented.

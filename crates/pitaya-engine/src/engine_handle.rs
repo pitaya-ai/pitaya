@@ -2,7 +2,7 @@ use std::sync::Arc;
 
 use pitaya_core::EngineStatusDto;
 
-/// In-process handle for UI and tests. Full task graph wires in P1.
+/// In-process handle for UI and tests. Full task graph wires here when runtime is implemented.
 #[derive(Clone)]
 pub struct EngineHandle {
     inner: Arc<EngineHandleInner>,

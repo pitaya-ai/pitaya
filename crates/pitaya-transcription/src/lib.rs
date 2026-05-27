@@ -1,1 +1,1 @@
-//! Local-first transcription adapters (P2).
+//! Local-first transcription adapters. Not yet implemented.

@@ -1,1 +1,1 @@
-//! Enhanced notes and prompt registry (P4).
+//! Enhanced notes and prompt registry. Not yet implemented.

@@ -1,3 +1,3 @@
-//! SQLite persistence layer. Writer actor and FTS live here in P1.
+//! SQLite persistence layer. Writer actor and FTS not yet implemented.
 
 pub mod migrations;

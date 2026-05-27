@@ -1,1 +1,1 @@
-//! Ollama and BYOK completion routers (P4+).
+//! Ollama and BYOK completion routers. Not yet implemented.

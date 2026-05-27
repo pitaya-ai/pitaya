@@ -1,1 +1,1 @@
-//! Grounded chat turns and recipe execution (P4/P5).
+//! Grounded chat turns and recipe execution. Not yet implemented.

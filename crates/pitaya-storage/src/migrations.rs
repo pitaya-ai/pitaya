@@ -1,1 +1,1 @@
-//! SQL migrations applied by the storage writer (P1).
+//! SQL migrations applied by the storage writer. Not yet implemented.

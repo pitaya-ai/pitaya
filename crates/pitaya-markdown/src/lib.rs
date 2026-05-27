@@ -1,1 +1,1 @@
-//! CommonMark subset and [[citation:uuid]] AST (P4).
+//! CommonMark subset and [[citation:uuid]] AST. Not yet implemented.
