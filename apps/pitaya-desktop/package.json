@@ -1,0 +1,43 @@
+{
+  "name": "pitaya-desktop",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "tauri": "tauri",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@pitaya/tailwind": "workspace:*",
+    "@tanstack/react-query": "^5.90.2",
+    "@tanstack/react-router": "^1.132.47",
+    "@tauri-apps/api": "^2.8.0",
+    "motion": "^12.23.12",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "zustand": "^5.0.8"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.36.0",
+    "@pitaya/tsconfig": "workspace:*",
+    "@tailwindcss/vite": "^4.1.13",
+    "@tanstack/react-form": "^1.23.5",
+    "@tanstack/react-table": "^8.21.3",
+    "@tanstack/react-virtual": "^3.13.12",
+    "@tauri-apps/cli": "^2.8.4",
+    "@types/react": "^19.1.13",
+    "@types/node": "^22.18.6",
+    "@types/react-dom": "^19.1.9",
+    "@vitejs/plugin-react": "^5.0.3",
+    "eslint": "^9.36.0",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "globals": "^16.4.0",
+    "tailwindcss": "^4.1.13",
+    "typescript": "^5.9.2",
+    "typescript-eslint": "^8.44.0",
+    "vite": "^7.1.7"
+  }
+}

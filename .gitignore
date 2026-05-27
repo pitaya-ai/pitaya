@@ -10,6 +10,3 @@ dist/
 # Tauri
 apps/pitaya-desktop/src-tauri/gen/
 apps/pitaya-desktop/src-tauri/WixTools/
-
-# Generated bindings (regenerate via `pnpm tauri dev` in debug)
-apps/pitaya-desktop/src/bindings.ts
