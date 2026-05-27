@@ -1,29 +1,20 @@
 use std::sync::Mutex;
 
+use pitaya_core::{EngineStatusDto, PitayaError};
 use pitaya_engine::EngineHandle;
-use serde::Serialize;
-use specta::Type;
 use tauri_specta::{collect_commands, Builder};
 
 struct AppState {
     engine: EngineHandle,
 }
 
-#[derive(Debug, Clone, Serialize, Type)]
-#[serde(rename_all = "snake_case")]
-struct EngineStatusResponse {
-    state: String,
-    version: String,
-}
-
 #[tauri::command]
 #[specta::specta]
-fn get_engine_status(state: tauri::State<'_, Mutex<AppState>>) -> EngineStatusResponse {
-    let dto = state.lock().expect("app state poisoned").engine.status();
-    EngineStatusResponse {
-        state: format!("{:?}", dto.state),
-        version: dto.version,
-    }
+fn get_engine_status(
+    state: tauri::State<'_, Mutex<AppState>>,
+) -> Result<EngineStatusDto, PitayaError> {
+    let app = state.lock().map_err(|_| PitayaError::Internal)?;
+    Ok(app.engine.status())
 }
 
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
@@ -59,4 +50,21 @@ pub fn run() {
         })
         .run(tauri::generate_context!())
         .expect("error while running pitaya-desktop");
+}
+
+#[cfg(test)]
+mod bindings {
+    use super::get_engine_status;
+    use tauri_specta::{collect_commands, Builder};
+
+    #[test]
+    fn export_bindings_match() {
+        Builder::<tauri::Wry>::new()
+            .commands(collect_commands![get_engine_status])
+            .export(
+                specta_typescript::Typescript::default(),
+                "../src/bindings.ts",
+            )
+            .expect("failed to export typescript bindings");
+    }
 }
