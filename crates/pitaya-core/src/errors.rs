@@ -1,6 +1,7 @@
 use thiserror::Error;
 
 #[derive(Debug, Clone, Error, serde::Serialize, serde::Deserialize)]
+#[cfg_attr(feature = "typescript", derive(specta::Type))]
 #[serde(tag = "code", content = "message")]
 #[non_exhaustive]
 pub enum PitayaError {
