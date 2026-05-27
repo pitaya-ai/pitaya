@@ -37,7 +37,6 @@ pub fn run() {
     let engine = EngineHandle::new();
 
     tauri::Builder::default()
-        .plugin(tauri_plugin_shell::init())
         .invoke_handler(specta_builder.invoke_handler())
         .manage(Mutex::new(AppState {
             engine: engine.clone(),

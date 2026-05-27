@@ -3,16 +3,9 @@ use serde::{Deserialize, Serialize};
 #[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]
 #[cfg_attr(feature = "typescript", derive(specta::Type))]
 #[serde(rename_all = "snake_case")]
-#[non_exhaustive]
 pub enum EngineState {
     Idle,
-    ArmingCapture,
-    Recording,
-    Paused,
-    Stopping,
-    PostProcessing,
-    ErrorRecoverable,
-    ErrorFatal,
+    Error,
 }
 
 #[derive(Debug, Clone, PartialEq, Eq, Serialize, Deserialize)]

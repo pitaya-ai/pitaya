@@ -11,4 +11,3 @@ workspace = true
 
 [dependencies]
 pitaya-core = { workspace = true }
-rusqlite = { workspace = true }

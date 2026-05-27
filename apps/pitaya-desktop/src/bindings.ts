@@ -25,9 +25,9 @@ async getEngineStatus() : Promise<Result<EngineStatusDto, PitayaError>> {
 
 /** user-defined types **/
 
-export type EngineState = "idle" | "arming_capture" | "recording" | "paused" | "stopping" | "post_processing" | "error_recoverable" | "error_fatal"
+export type EngineState = "idle" | "error"
 export type EngineStatusDto = { state: EngineState; version: string }
-export type PitayaError = { code: "InvalidTransition"; message: string } | { code: "NotFound"; message: string } | { code: "Internal" }
+export type PitayaError = { code: "Internal" }
 
 /** tauri-specta globals **/
 

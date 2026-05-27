@@ -10,11 +10,3 @@ impl MeetingId {
         Self(Uuid::new_v4())
     }
 }
-
-#[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Serialize, Deserialize)]
-#[serde(transparent)]
-pub struct ChatThreadId(pub Uuid);
-
-#[derive(Debug, Clone, Copy, PartialEq, Eq, Hash, Serialize, Deserialize)]
-#[serde(transparent)]
-pub struct FolderId(pub Uuid);
