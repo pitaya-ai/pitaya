@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@theme {
+  --color-surface: #131313;
+  --color-surface-container: #201f1f;
+  --color-on-surface: #e5e2e1;
+  --color-primary: #ffb4a7;
+  --color-on-primary: #571d14;
+  --color-tertiary: #81d6bf;
+  --font-display: "EB Garamond", serif;
+  --font-sans: "Inter", system-ui, sans-serif;
+  --spacing-unit: 8px;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+}
