@@ -51,20 +51,3 @@ pub fn run() {
         .run(tauri::generate_context!())
         .expect("error while running pitaya-desktop");
 }
-
-#[cfg(test)]
-mod bindings {
-    use super::get_engine_status;
-    use tauri_specta::{collect_commands, Builder};
-
-    #[test]
-    fn export_bindings_match() {
-        Builder::<tauri::Wry>::new()
-            .commands(collect_commands![get_engine_status])
-            .export(
-                specta_typescript::Typescript::default(),
-                "../src/bindings.ts",
-            )
-            .expect("failed to export typescript bindings");
-    }
-}

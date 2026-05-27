@@ -20,23 +20,16 @@ Monorepo layout:
 
 ```bash
 pnpm install
-make dev          # or: pnpm dev
-make verify       # fmt, clippy, tests, bindings, tsc, lint, build
-make bindings     # regenerate src/bindings.ts from Rust commands
+pnpm dev
 ```
 
-`tauri dev` (debug) also regenerates `apps/pitaya-desktop/src/bindings.ts` via **tauri-specta**. CI runs `make bindings` via the Rust test suite to keep bindings in sync.
+Debug `tauri dev` regenerates `apps/pitaya-desktop/src/bindings.ts` via **tauri-specta**.
 
-### Roadmap phases
-
-| Phase | Focus |
-|-------|--------|
-| **P1** | Engine, SQLite, MCP socket — no tray/UI |
-| **P2** | PipeWire + local ASR |
-| **P3** | Tauri daily driver (home, tray, transcript) |
-| **P4–P5** | Intelligence + MCP tools |
-
-See [ROADMAP.md](ROADMAP.md) and [ARCHITECTURE.md](ARCHITECTURE.md).
+```bash
+cargo build -p pitaya-desktop
+pnpm --filter pitaya-desktop check
+pnpm --filter pitaya-desktop lint
+```
 
 ### pnpm supply chain
 

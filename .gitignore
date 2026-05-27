@@ -1,3 +1,8 @@
+# Local planning docs (kept on disk, not in git)
+ARCHITECTURE.md
+ROADMAP.md
+DESIGN.md
+
 /target/
 **/target/
 node_modules/
