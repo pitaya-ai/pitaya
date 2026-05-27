@@ -1,4 +1,7 @@
 @import "@pitaya/tailwind/theme.css";
+@import "@fontsource/inter/400.css";
+@import "@fontsource/inter/600.css";
+@import "@fontsource/eb-garamond/500.css";
 
 body {
   margin: 0;

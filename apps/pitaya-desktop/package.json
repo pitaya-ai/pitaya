@@ -6,27 +6,26 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "check": "tsc -b --pretty false",
     "preview": "vite preview",
     "tauri": "tauri",
     "lint": "eslint ."
   },
   "dependencies": {
+    "@fontsource/eb-garamond": "^5.2.6",
+    "@fontsource/inter": "^5.2.6",
     "@pitaya/tailwind": "workspace:*",
     "@tanstack/react-query": "^5.90.2",
     "@tanstack/react-router": "^1.132.47",
     "@tauri-apps/api": "^2.8.0",
     "motion": "^12.23.12",
     "react": "^19.1.1",
-    "react-dom": "^19.1.1",
-    "zustand": "^5.0.8"
+    "react-dom": "^19.1.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.36.0",
     "@pitaya/tsconfig": "workspace:*",
     "@tailwindcss/vite": "^4.1.13",
-    "@tanstack/react-form": "^1.23.5",
-    "@tanstack/react-table": "^8.21.3",
-    "@tanstack/react-virtual": "^3.13.12",
     "@tauri-apps/cli": "^2.8.4",
     "@types/react": "^19.1.13",
     "@types/node": "^22.18.6",

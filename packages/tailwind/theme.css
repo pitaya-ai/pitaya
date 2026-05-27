@@ -7,6 +7,8 @@
   --color-primary: #ffb4a7;
   --color-on-primary: #571d14;
   --color-tertiary: #81d6bf;
+  --color-outline-variant: #544340;
+  --color-error: #ffb4ab;
   --font-display: "EB Garamond", serif;
   --font-sans: "Inter", system-ui, sans-serif;
   --spacing-unit: 8px;
