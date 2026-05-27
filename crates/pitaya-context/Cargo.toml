@@ -1,0 +1,13 @@
+[package]
+name = "pitaya-context"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+description = "Chat scope resolution and retrieval planning for Pitaya"
+
+[lints]
+workspace = true
+
+[dependencies]
+pitaya-core = { workspace = true }

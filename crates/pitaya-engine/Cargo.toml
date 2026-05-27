@@ -1,0 +1,17 @@
+[package]
+name = "pitaya-engine"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+description = "In-process Tokio engine: task graph, MCP socket, event fan-out"
+
+[lints]
+workspace = true
+
+[dependencies]
+pitaya-core = { workspace = true }
+pitaya-meetings = { workspace = true }
+pitaya-storage = { workspace = true }
+tokio = { workspace = true }
+tracing = { workspace = true }

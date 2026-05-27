@@ -1,0 +1,61 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/pitaya-core",
+    "crates/pitaya-meetings",
+    "crates/pitaya-storage",
+    "crates/pitaya-engine",
+    "crates/pitaya-audio",
+    "crates/pitaya-transcription",
+    "crates/pitaya-llm",
+    "crates/pitaya-context",
+    "crates/pitaya-chat",
+    "crates/pitaya-notes",
+    "crates/pitaya-markdown",
+    "crates/pitaya-diarization",
+    "crates/pitaya-mcp",
+    "apps/pitaya-desktop/src-tauri",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/mentzerindustries/pitaya"
+rust-version = "1.88"
+
+[workspace.dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+uuid = { version = "1", features = ["serde", "v4"] }
+thiserror = "2"
+anyhow = "1"
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "sync", "time"] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+rusqlite = { version = "0.32", features = ["bundled"] }
+tauri = { version = "2", features = [] }
+tauri-build = { version = "2", features = [] }
+tauri-plugin-shell = "2"
+specta = { version = "=2.0.0-rc.22", features = ["derive", "serde_json"] }
+specta-typescript = "0.0.9"
+tauri-specta = { version = "=2.0.0-rc.21", features = ["derive", "typescript"] }
+
+pitaya-core = { path = "crates/pitaya-core" }
+pitaya-meetings = { path = "crates/pitaya-meetings" }
+pitaya-storage = { path = "crates/pitaya-storage" }
+pitaya-engine = { path = "crates/pitaya-engine" }
+pitaya-audio = { path = "crates/pitaya-audio" }
+pitaya-transcription = { path = "crates/pitaya-transcription" }
+pitaya-llm = { path = "crates/pitaya-llm" }
+pitaya-context = { path = "crates/pitaya-context" }
+pitaya-chat = { path = "crates/pitaya-chat" }
+pitaya-notes = { path = "crates/pitaya-notes" }
+pitaya-markdown = { path = "crates/pitaya-markdown" }
+pitaya-diarization = { path = "crates/pitaya-diarization" }
+
+[workspace.lints.rust]
+unsafe_code = "forbid"
+
+[workspace.lints.clippy]
+all = { level = "warn", priority = -1 }

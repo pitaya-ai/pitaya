@@ -1,0 +1,17 @@
+[package]
+name = "pitaya-llm"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+description = "Completion adapters and model-class routing for Pitaya"
+
+[lints]
+workspace = true
+
+[features]
+default = []
+cloud-llm = []
+
+[dependencies]
+pitaya-core = { workspace = true }
