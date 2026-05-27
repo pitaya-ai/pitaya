@@ -1,0 +1,19 @@
+# Local planning docs (kept on disk, not in git)
+ARCHITECTURE.md
+ROADMAP.md
+DESIGN.md
+docs/
+
+/target/
+**/target/
+node_modules/
+dist/
+apps/pitaya-desktop/vite.config.d.ts
+.DS_Store
+*.log
+.env
+.env.*
+
+# Tauri
+apps/pitaya-desktop/src-tauri/gen/
+apps/pitaya-desktop/src-tauri/WixTools/

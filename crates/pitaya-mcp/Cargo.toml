@@ -1,0 +1,18 @@
+[package]
+name = "pitaya-mcp"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+description = "stdio MCP bridge to the Pitaya engine Unix socket"
+publish = false
+
+[[bin]]
+name = "pitaya-mcp"
+path = "src/main.rs"
+
+[lints]
+workspace = true
+
+[dependencies]
+pitaya-core = { workspace = true }

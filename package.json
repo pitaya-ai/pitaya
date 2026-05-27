@@ -1,0 +1,14 @@
+{
+  "name": "pitaya",
+  "private": true,
+  "packageManager": "pnpm@10.12.1",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "pnpm --filter pitaya-desktop tauri dev",
+    "build": "pnpm --filter pitaya-desktop build",
+    "check": "pnpm -r --if-present run check",
+    "lint": "pnpm -r --if-present run lint"
+  }
+}

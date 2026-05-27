@@ -1,0 +1,18 @@
+[package]
+name = "pitaya-transcription"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+description = "ASR routers, VAD, and model catalog for Pitaya"
+
+[lints]
+workspace = true
+
+[features]
+default = []
+cloud-asr = []
+gpu-whisper = []
+
+[dependencies]
+pitaya-core = { workspace = true }

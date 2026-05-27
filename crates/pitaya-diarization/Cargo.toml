@@ -1,0 +1,14 @@
+[package]
+name = "pitaya-diarization"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+description = "Speaker diarization (post-MVP) for Pitaya"
+publish = false
+
+[lints]
+workspace = true
+
+[dependencies]
+pitaya-core = { workspace = true }

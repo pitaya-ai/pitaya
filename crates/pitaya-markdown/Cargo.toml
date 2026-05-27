@@ -1,0 +1,13 @@
+[package]
+name = "pitaya-markdown"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+description = "Canonical markdown and citation AST for Pitaya"
+
+[lints]
+workspace = true
+
+[dependencies]
+pitaya-core = { workspace = true }
